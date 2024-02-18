@@ -1,0 +1,182 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PTLSPの文档 – 标签</title>
+    <link>https://docs.ptlsp.com/tags/%E6%A0%87%E7%AD%BE/</link>
+    <description>Recent content in 标签 on PTLSPの文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 15 Jan 2024 16:19:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://docs.ptlsp.com/tags/%E6%A0%87%E7%AD%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>外挂标签</title>
+      <link>https://docs.ptlsp.com/blog/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 15 Jan 2024 16:19:00 +0000</pubDate>
+      
+      <guid>https://docs.ptlsp.com/blog/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</guid>
+      <description>
+        
+        
+        &lt;p&gt;原创教程地址：https://akilar.top/posts/615e2dec/&lt;/p&gt;
+&lt;p&gt;以下为自己练手学习的记录&lt;/p&gt;
+&lt;h2&gt;行内文本样式 text&lt;span class=&#34;absolute -mt-20&#34; id=&#34;行内文本样式-text&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%a1%8c%e5%86%85%e6%96%87%e6%9c%ac%e6%a0%b7%e5%bc%8f-text&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;{% tabs %}&lt;/p&gt;
+&lt;!-- tab 标签语法 --&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;{% u 文本内容 %}
+{% emp 文本内容 %}
+{% wavy 文本内容 %}
+{% del 文本内容 %}
+{% kbd 文本内容 %}
+{% psw 文本内容 %}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 样式预览 --&gt;
+&lt;ol&gt;
+&lt;li&gt;带 {% u 下划线 %} 的文本&lt;/li&gt;
+&lt;li&gt;带 {% emp 着重号 %} 的文本&lt;/li&gt;
+&lt;li&gt;带 {% wavy 波浪线 %} 的文本&lt;/li&gt;
+&lt;li&gt;带 {% del 删除线 %} 的文本&lt;/li&gt;
+&lt;li&gt;键盘样式的文本 {% kbd command %} + {% kbd D %}&lt;/li&gt;
+&lt;li&gt;密码样式的文本：{% psw 这里没有验证码 %}&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 示例源码 --&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;1. 带 {% u 下划线 %} 的文本
+2. 带 {% emp 着重号 %} 的文本
+3. 带 {% wavy 波浪线 %} 的文本
+4. 带 {% del 删除线 %} 的文本
+5. 键盘样式的文本 {% kbd command %} &amp;#43; {% kbd D %}
+6. 密码样式的文本：{% psw 这里没有验证码 %}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- endtab --&gt;
+&lt;p&gt;{% endtabs %}&lt;/p&gt;
+&lt;h2&gt;行内文本 span&lt;span class=&#34;absolute -mt-20&#34; id=&#34;行内文本-span&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%a1%8c%e5%86%85%e6%96%87%e6%9c%ac-span&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;{% tabs %}&lt;/p&gt;
+&lt;!-- tab 标签语法 --&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;{% span 样式参数(参数以空格划分), 文本内容 %}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 配置参数 --&gt;
+&lt;p&gt;字体: logo, code
+颜色: red,yellow,green,cyan,blue,gray
+大小: small, h4, h3, h2, h1, large, huge, ultra
+对齐方向: left, center, right&lt;/p&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 样式预览 --&gt;
+&lt;ul&gt;
+&lt;li&gt;彩色文字
+在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。&lt;/li&gt;
+&lt;li&gt;超大号文字
+文档「开始」页面中的标题部分就是超大号文字。
+{% span center logo large, Volantis %}
+{% span center small, A Wonderful Theme for Hexo %}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 示例源码 --&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;- 彩色文字
+在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。
+- 超大号文字
+文档「开始」页面中的标题部分就是超大号文字。
+{% span center logo large, Volantis %}
+{% span center small, A Wonderful Theme for Hexo %}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- endtab --&gt;
+&lt;p&gt;{% endtabs %}&lt;/p&gt;
+&lt;h2&gt;引用 note&lt;span class=&#34;absolute -mt-20&#34; id=&#34;引用-note&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%bc%95%e7%94%a8-note&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;{% tabs %}&lt;/p&gt;
+&lt;!-- tab 通用配置 --&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: simple
+  icons: false
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 语法格式 --&gt;
+&lt;ol&gt;
+&lt;li&gt;带 {% u 下划线 %} 的文本&lt;/li&gt;
+&lt;li&gt;带 {% emp 着重号 %} 的文本&lt;/li&gt;
+&lt;li&gt;带 {% wavy 波浪线 %} 的文本&lt;/li&gt;
+&lt;li&gt;带 {% del 删除线 %} 的文本&lt;/li&gt;
+&lt;li&gt;键盘样式的文本 {% kbd command %} + {% kbd D %}&lt;/li&gt;
+&lt;li&gt;密码样式的文本：{% psw 这里没有验证码 %}&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- endtab --&gt;
+&lt;!-- tab 示例源码 --&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;1. 带 {% u 下划线 %} 的文本
+2. 带 {% emp 着重号 %} 的文本
+3. 带 {% wavy 波浪线 %} 的文本
+4. 带 {% del 删除线 %} 的文本
+5. 键盘样式的文本 {% kbd command %} &amp;#43; {% kbd D %}
+6. 密码样式的文本：{% psw 这里没有验证码 %}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- endtab --&gt;
+&lt;p&gt;{% endtabs %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

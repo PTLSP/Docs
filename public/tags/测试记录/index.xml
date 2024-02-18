@@ -1,0 +1,56 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PTLSPの文档 – 测试记录</title>
+    <link>https://docs.ptlsp.com/tags/%E6%B5%8B%E8%AF%95%E8%AE%B0%E5%BD%95/</link>
+    <description>Recent content in 测试记录 on PTLSPの文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 24 Jan 2024 01:08:57 +0000</lastBuildDate>
+    
+	  <atom:link href="https://docs.ptlsp.com/tags/%E6%B5%8B%E8%AF%95%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>VirtIO-FS 共享模式测速记录</title>
+      <link>https://docs.ptlsp.com/blog/2024-01-24.virtio-fs%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%BC%8F%E6%B5%8B%E9%80%9F%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Wed, 24 Jan 2024 01:08:57 +0000</pubDate>
+      
+      <guid>https://docs.ptlsp.com/blog/2024-01-24.virtio-fs%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%BC%8F%E6%B5%8B%E9%80%9F%E8%AE%B0%E5%BD%95/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;测试环境&lt;span class=&#34;absolute -mt-20&#34; id=&#34;测试环境&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e7%8e%af%e5%a2%83&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;测试宿主：Unraid&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试系统：Windows11虚拟机&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;测试记录&lt;span class=&#34;absolute -mt-20&#34; id=&#34;测试记录&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e8%ae%b0%e5%bd%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;M2机械Sata混合在一起的盘：
+（也就是Unraid全盘映射）
+&lt;img src=&#34;https://pic.imgdb.cn/item/64b4096e1ddac507ccdc67ca.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Unraid共享模式指定单盘 Pcie4.0 M2 固态测试&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.imgdb.cn/item/64b409861ddac507ccdd0b23.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;结论：网上关于这个的信息太少了 这就是VirtIO-FS速度的极限了？测试下来只能跑这么快 虽然这种方法 大大的降低了cpu的占用 但速度确实太拉垮了 完全没符合预期 不清楚是不是我管理口是千兆 然后虚拟机也是虚拟网卡的原因 但是虚拟网卡走smb协议 传输最高都能达到400MB 只有等后续上了万兆网卡 虚拟万兆直通再试试看&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

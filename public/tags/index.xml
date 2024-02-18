@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PTLSPの文档 – Tags</title>
+    <link>https://docs.ptlsp.com/tags/</link>
+    <description>Recent content in Tags on PTLSPの文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 01 Feb 2024 08:07:53 +0000</lastBuildDate>
+    
+	  <atom:link href="https://docs.ptlsp.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

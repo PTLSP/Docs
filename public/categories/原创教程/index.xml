@@ -1,0 +1,455 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PTLSPの文档 – 原创教程</title>
+    <link>https://docs.ptlsp.com/categories/%E5%8E%9F%E5%88%9B%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 原创教程 on PTLSPの文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 01 Feb 2024 08:07:53 +0000</lastBuildDate>
+    
+	  <atom:link href="https://docs.ptlsp.com/categories/%E5%8E%9F%E5%88%9B%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>MoviePilot企业微信推送之新手喂饭教程</title>
+      <link>https://docs.ptlsp.com/blog/2024-02-01-moviepilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 01 Feb 2024 08:07:53 +0000</pubDate>
+      
+      <guid>https://docs.ptlsp.com/blog/2024-02-01-moviepilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;教学指引&lt;span class=&#34;absolute -mt-20&#34; id=&#34;教学指引&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%95%99%e5%ad%a6%e6%8c%87%e5%bc%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;期间参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pt-helper.notion.site/50a7b44e255d40109bd7ad474abfeba5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pt-helper.notion.site/50a7b44e255d40109bd7ad474abfeba5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Putarku/MoviePilot-Help?tab=readme-ov-file#%E5%BE%AE%E4%BF%A1%E9%80%9A%E7%9F%A5%E9%97%AE%E9%A2%98&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/Putarku/MoviePilot-Help?tab=readme-ov-file#%E5%BE%AE%E4%BF%A1%E9%80%9A%E7%9F%A5%E9%97%AE%E9%A2%98&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;大家点进去看 了解各个信息 代表什么意思 网上教程已经很详细了 基础的我就不再过多的重述 直接看我的截图 找到以下几个关键点 我用数字代表各个参数 大家理解起来事半功倍&lt;/p&gt;
+&lt;p&gt;以下为windows的配置文件参数 docker用户无需担心 对号入座进群晖docker 其实是一样的 主要就是这几个环境变量 别害怕 我会带领大家一步一步的操作并理解。&lt;/p&gt;
+&lt;h2&gt;配置变量&lt;span class=&#34;absolute -mt-20&#34; id=&#34;配置变量&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%8f%98%e9%87%8f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;WeChat企业ID
+WECHAT_CORPID=①&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WeChat应用Secret
+WECHAT_APP_SECRET=②&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WeChat应用ID
+WECHAT_APP_ID=③&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WeChat代理服务器
+WECHAT_PROXY=④&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WeChat Token
+WECHAT_TOKEN=⑤&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WeChat EncodingAESKey
+WECHAT_ENCODING_AESKEY=⑥&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;# WeChat企业ID&lt;span class=&#34;absolute -mt-20&#34; id=&#34;-wechat企业id&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-wechat%e4%bc%81%e4%b8%9aid&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image026cf54236226777-20240201095607462.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;# WeChat应用Secret&lt;span class=&#34;absolute -mt-20&#34; id=&#34;-wechat应用secret&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-wechat%e5%ba%94%e7%94%a8secret&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image3d8d01d771a150a2-20240201095627891.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/imagebde89f36ac779fbd-20240201095646769.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;贴心附上MP的LOGO:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/ikuf2u-20240201095748515.webp&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image81883dea1920ee07.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image205a247007a37a12.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;# WeChat应用ID&lt;span class=&#34;absolute -mt-20&#34; id=&#34;-wechat应用id&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-wechat%e5%ba%94%e7%94%a8id&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/imagebeee28b4ce025956.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;# WeChat代理服务器&lt;span class=&#34;absolute -mt-20&#34; id=&#34;-wechat代理服务器&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-wechat%e4%bb%a3%e7%90%86%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;我已经用我的vps搭建了代理服务器 并绑定了域名 大家直接调用就好&lt;/p&gt;
+&lt;p&gt;微信代理地址：https://mp.ptlsp.com/&lt;/p&gt;
+&lt;p&gt;企业微信应用后台的
+企业可信IP：148.135.46.230&lt;/p&gt;
+&lt;p&gt;微信代理地址我想要大家长期使用 所以不需要再去mp配置参数里去改微信代理地址了 我已经把ip绑定到域名上了
+就算以后vps到期 或者这个v4固定公网失效了 我会继续采购vps 绑定微信到代理地址 让大家继续用 只需要登录企业微信更换企业可信ip 为最新的IP即可！&lt;/p&gt;
+&lt;p&gt;避免期间大家翻车 我把细节交代清楚 看下面截图 准确填入！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/1704504711352-20240201101547549.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;ps：如果你是老版本 配置文件提示微信代理服务器最后面不需要添加 “/”  你都加不加都试一下嘛 这东西说不清楚
+我参考网上教程看到别人是加上的 我也加上的 我没问题 不行都试试 这个是个排错点 参考起来&lt;/p&gt;
+&lt;h3&gt;WECHAT_TOKEN 跟 WeChat EncodingAESKey&lt;span class=&#34;absolute -mt-20&#34; id=&#34;wechat_token-跟-wechat-encodingaeskey&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#wechat_token-%e8%b7%9f-wechat-encodingaeskey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/3bbdc3900a59d76083fd81ddf4ce271.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/7ffb78e4b4b61cadd323129e764d502.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;注意事项&lt;span class=&#34;absolute -mt-20&#34; id=&#34;注意事项&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;期间tg用户反馈 跟着我的教程使用 http://ip:端口/api/v1/message/?token=moviepilot 这个接口导致MP开机即死机 连日志都看不到
+他的环境为：群晖6.2 Docker
+在我的建议下 他使用官方提供的第二个接口地址就成功了 所以我之前的教程也明说了 未知bug我也不懂 这两换着来 不要纠结！&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;http://ip:端口/api/v1/message/?token=moviepilot&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;http://ip:端口/api/v1/message/&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;切记二选一！！！！&lt;/p&gt;
+&lt;h3&gt;官方解释&lt;span class=&#34;absolute -mt-20&#34; id=&#34;官方解释&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%98%e6%96%b9%e8%a7%a3%e9%87%8a&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image27f84a7a6f37d008.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;填写可信IP&lt;span class=&#34;absolute -mt-20&#34; id=&#34;填写可信ip&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%a1%ab%e5%86%99%e5%8f%af%e4%bf%a1ip&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;148.135.46.230&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/c701844fe3768d9498220ac53f20502.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;自此 教程结束 完成以上步骤基本没问题了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image9c05b185eb43c7dd.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/imagec983028c05e2058d.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image3298fcf670bde9be.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;MP系统版本参考：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../img/2024-02-01-MoviePilot%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E4%B9%8B%E6%96%B0%E6%89%8B%E5%96%82%E9%A5%AD%E6%95%99%E7%A8%8B/image0e68798a3cea6087.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;服务声明&lt;span class=&#34;absolute -mt-20&#34; id=&#34;服务声明&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%9c%8d%e5%8a%a1%e5%a3%b0%e6%98%8e&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;{% tip ban faa-parent animated-hover %}&lt;p class=&#34;faa-flash&#34;&gt;不允许任何技术大佬利用此免费服务售卖技术！此教程不允许转载到国内任何公共平台 ！服务完全免费！仅供学习参考！&lt;/p&gt;{% endtip %}&lt;/p&gt;
+&lt;p&gt;截止到2024.2.1 我未更新系统 依旧有效 如有问题 及时反馈！&lt;/p&gt;
+&lt;p&gt;Github服务地址：https://github.com/PTLSP/MoviePilot-Wechat-PROXY&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>批量获取当前路径文件URL</title>
+      <link>https://docs.ptlsp.com/blog/2024-01-27.%E5%AE%9D%E5%A1%94%E6%89%B9%E9%87%8F%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E8%B7%AF%E5%BE%84%E6%96%87%E4%BB%B6url/</link>
+      <pubDate>Sat, 27 Jan 2024 23:12:36 +0000</pubDate>
+      
+      <guid>https://docs.ptlsp.com/blog/2024-01-27.%E5%AE%9D%E5%A1%94%E6%89%B9%E9%87%8F%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E8%B7%AF%E5%BE%84%E6%96%87%E4%BB%B6url/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;前言&lt;span class=&#34;absolute -mt-20&#34; id=&#34;前言&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我之前做了一个二次元随机图嘛：&lt;/p&gt;
+&lt;p&gt;![](/img/截屏2024-01-28 上午1.19.39.png)&lt;/p&gt;
+&lt;p&gt;random.php 直接指向random文件夹下的图片 源码如下：&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+// 指定图片目录的相对路径
+$img_dir = &amp;#39;random/&amp;#39;;
+
+// 获取符合条件的图片列表
+$img_list = glob($img_dir . &amp;#39;*.{gif,jpg,png,webp}&amp;#39;, GLOB_BRACE);
+
+// 如果图片列表不为空，则随机选择一张图片并输出
+if (!empty($img_list)) {
+    $img_url = $img_list[array_rand($img_list)];
+
+    // 获取图片类型
+    $img_info = getimagesize($img_url);
+    if ($img_info !== false) {
+        $img_mime = $img_info[&amp;#39;mime&amp;#39;];
+        header(&amp;#39;Content-Type: &amp;#39; . $img_mime); // 设置输出的内容类型为图片的 MIME 类型
+        readfile($img_url);
+        exit;
+    } else {
+        echo &amp;#39;Failed to determine the image type.&amp;#39;;
+    }
+} else {
+    // 如果图片列表为空，则输出错误信息
+    echo &amp;#39;No images found in &amp;#39; . $img_dir;
+}
+?&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Nginx的伪静态配置如下：&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;location /random {
+    rewrite ^/random$ /random.php last;
+}
+
+location /cover {
+    rewrite ^/random$ /cover.php last;
+}
+
+location /gif {
+    rewrite ^/random$ /gif.php last;
+}
+
+location /4k {
+    rewrite ^/random$ /4k.php last;
+}
+location /mp {
+    rewrite ^/random$ /mp.php last;
+}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;目的是为了获取随机图接口地址固定为：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://xxx.xxx.com/random&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://xxx.xxx.com/random&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;指向的实际路径为:https://xxx.xxx.com/random.php&lt;/p&gt;
+&lt;p&gt;这样能解决某些框架获取不到.php路径 采取的解决办法&lt;/p&gt;
+&lt;p&gt;效果自然是非常ok 但有个问题就是 虽然路径固定了 random路径下的文件也确实被cloudflare缓存了 但我不确定是不是我单独打开图片真实路径那一刻才缓存上的&lt;/p&gt;
+&lt;h2&gt;发现问题点并尝试优化&lt;span class=&#34;absolute -mt-20&#34; id=&#34;发现问题点并尝试优化&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%8f%91%e7%8e%b0%e9%97%ae%e9%a2%98%e7%82%b9%e5%b9%b6%e5%b0%9d%e8%af%95%e4%bc%98%e5%8c%96&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;监控网站源服务器发现上传的流量还是不少 所以就很怀疑是不是没被cf缓存上 每次都从源服务器获取图片 而且random这个接口是获取不到原图片文件夹下的真实路径的 如果用户访问你的博客 非常喜欢这个图 想扒会非常困难 而且也不方便随时调用其他url地址的图片&lt;/p&gt;
+&lt;p&gt;而我在制作随机图前就知道了php源码是可以通过调用txt文本里面url来实现跳转到图片url或直接调用本地目录图片的url的&lt;/p&gt;
+&lt;p&gt;我也早就发现有大佬把图片传到gitee仓库 用我这个教程的方法来批量获取图片路径 用跳转的方式来打开图片 那速度嘎嘎快 比cf的cdn快得多！而且还不占用服务器存储！！！&lt;/p&gt;
+&lt;p&gt;想法有了 可行性也具备了 就差实际行动！接下来就是具体实现教程！&lt;/p&gt;
+&lt;h2&gt;利用脚本获取文件夹路径并指定网址前缀&lt;span class=&#34;absolute -mt-20&#34; id=&#34;利用脚本获取文件夹路径并指定网址前缀&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%88%a9%e7%94%a8%e8%84%9a%e6%9c%ac%e8%8e%b7%e5%8f%96%e6%96%87%e4%bb%b6%e5%a4%b9%e8%b7%af%e5%be%84%e5%b9%b6%e6%8c%87%e5%ae%9a%e7%bd%91%e5%9d%80%e5%89%8d%e7%bc%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;要实现批量获取 random 路径下文件的路径，并在路径前面加上网址 &lt;a href=&#34;https://xxx.xxx.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://xxx.xxx.com&lt;/a&gt; ，您可以使用以下脚本来实现：&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+base_url=&amp;#34;https://xxx.xxx.com/random/&amp;#34;  # 网址前缀
+directory=&amp;#34;/www/wwwroot/xxx.xxx.com/random&amp;#34;  # random 路径
+output_file=&amp;#34;/www/wwwroot/xxx.xxx.com/random.txt&amp;#34;  # 输出文件名
+
+# 遍历目录下的文件
+for file in &amp;#34;$directory&amp;#34;/*; do
+    if [ -f &amp;#34;$file&amp;#34; ]; then  # 只处理文件，不处理目录
+        filename=$(basename &amp;#34;$file&amp;#34;)  # 获取文件名
+        url=&amp;#34;$base_url$filename&amp;#34;  # 构建完整的 URL
+        echo &amp;#34;$url&amp;#34; &amp;gt;&amp;gt; &amp;#34;$output_file&amp;#34;  # 输出 URL到文件
+    fi
+done&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;请将上述脚本中的 /www/wwwroot/xxx.xxx.com/random 替换为您实际的路径。运行脚本后，它将遍历指定目录下的文件，并输出每个文件的完整 URL，其中网址前缀为 &lt;a href=&#34;https://xxx.xxx.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://xxx.xxx.com/&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;您可以将脚本保存为一个文件（例如 get_random_urls.sh），并在终端中运行以下命令来执行脚本：&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;bash get_random_urls.sh&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;脚本将输出每个文件的 URL，您可以将输出保存到文件中或按需进行进一步处理。&lt;/p&gt;
+&lt;p&gt;{% tip warning faa-parent animated-hover %}&lt;p class=&#34;faa-horizontal&#34;&gt;请注意，脚本假设 random 路径下只包含文件，不包含子目录！所以请单独分类，以上举例请根据实际情况修改。&lt;/p&gt;{% endtip %}&lt;/p&gt;
+&lt;h3&gt;成功把random文件夹下的图片路径批量获取URL写入到random.txt文件&lt;span class=&#34;absolute -mt-20&#34; id=&#34;成功把random文件夹下的图片路径批量获取url写入到randomtxt文件&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%88%90%e5%8a%9f%e6%8a%8arandom%e6%96%87%e4%bb%b6%e5%a4%b9%e4%b8%8b%e7%9a%84%e5%9b%be%e7%89%87%e8%b7%af%e5%be%84%e6%89%b9%e9%87%8f%e8%8e%b7%e5%8f%96url%e5%86%99%e5%85%a5%e5%88%b0randomtxt%e6%96%87%e4%bb%b6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/28/image23bb8216a42fbf1c.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;F12已经能够获取到图片的真实路径了&lt;span class=&#34;absolute -mt-20&#34; id=&#34;f12已经能够获取到图片的真实路径了&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#f12%e5%b7%b2%e7%bb%8f%e8%83%bd%e5%a4%9f%e8%8e%b7%e5%8f%96%e5%88%b0%e5%9b%be%e7%89%87%e7%9a%84%e7%9c%9f%e5%ae%9e%e8%b7%af%e5%be%84%e4%ba%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;![](/img/截屏2024-01-28 上午1.16.35.png)&lt;/p&gt;
+&lt;p&gt;没写完没写完没写完！！！！！没写完没写完没写完！！！！！没写完没写完没写完！！！！！&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>反代教程之内网服务拥有自己的专属域名</title>
+      <link>https://docs.ptlsp.com/blog/2024-01-16.nas%E5%8F%8D%E4%BB%A3%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%8F%AA%E9%9C%80%E4%B8%80%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%B0%B1%E5%A4%9F%E5%95%A6/</link>
+      <pubDate>Tue, 16 Jan 2024 07:04:17 +0000</pubDate>
+      
+      <guid>https://docs.ptlsp.com/blog/2024-01-16.nas%E5%8F%8D%E4%BB%A3%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%8F%AA%E9%9C%80%E4%B8%80%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%B0%B1%E5%A4%9F%E5%95%A6/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% note pink &amp;lsquo;fas fa-car-crash&amp;rsquo; modern %}来不及解释了 系好安全带 快上车！！！{% endnote %}&lt;/p&gt;
+&lt;p&gt;{% progress 10 red 进度10％ %}&lt;/p&gt;
+&lt;h2&gt;思路分析&lt;span class=&#34;absolute -mt-20&#34; id=&#34;思路分析&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%80%9d%e8%b7%af%e5%88%86%e6%9e%90&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我太清楚把玩软路由跟Nas的朋友想要体验到什么样的效果了 奈何网上教程杂乱无章 大多都写得很烂 没有一个靠谱的大佬指导 期间会踩很多坑 那种无助的感觉 在我这不会存在了&lt;/p&gt;
+&lt;p&gt;此教程将带领新手抓住每一个细节 学会家用Nas或软路由反代内网服务 类似于qB TR这样的下载器 又或者Emby Plex这样的影视媒体库 又或者爱快 群晖 MoviePilot的后台等等 我要教会大家的就是怎么样给这些服务 每一个都安排一个二级域名 类似于&lt;/p&gt;
+&lt;p&gt;qb的:qb.xxx.com:888
+emby的:emby.xxx.com:888&lt;/p&gt;
+&lt;p&gt;但众所周知的是 家宽的80 443端口均为封禁状态 我们没法直接调用 只能在这些域名后面手动添加其他的端口才能访问 但一个域名转发映射不同的端口又难记住 所以很多人都有一个想法 给他们安排一个专属的二级域名 然后统一不变但又可用的端口 类似888 不就行了嘛 是的 这方法非常可行！此教程就会带领大家手把手学废 从家宽v4或v6 ddns到Cloudflare开始！&lt;/p&gt;
+&lt;h2&gt;准备事项&lt;span class=&#34;absolute -mt-20&#34; id=&#34;准备事项&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%87%86%e5%a4%87%e4%ba%8b%e9%a1%b9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Docker环境
+（不管你是什么nas软路由都有这玩意吧 咱们需要的工具很简单 直接docker命令安装）&lt;/li&gt;
+&lt;li&gt;CloudFlare账号
+（我们是要开ssl的！必须用这个 {% del 毕竟泛域名15年免续签 你域名过期了 证书都不会过期 %} 阿里云用户把dns解析转到cf谢谢 ）
+（暂时可以了解一下 源证书目前不适用本教程 因为CloudFlare的自签证书不开小云朵不给用）
+{% link 注册CloudFlare账号, &lt;a href=&#34;https://dash.cloudflare.com/sign-up&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dash.cloudflare.com/sign-up&lt;/a&gt;, &lt;a href=&#34;https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg&lt;/a&gt; %}&lt;/li&gt;
+&lt;li&gt;公网V4或开启IPV6
+（V6用户需要另一端也开启V6地址才能访问 手机流量已经普及 你公司网络可不一定哦~）&lt;/li&gt;
+&lt;li&gt;安装DDNS-Go
+（不要用爱快自带的 不要问我为什么 必须用这个！！！！）&lt;/li&gt;
+&lt;li&gt;安装NginxProxyManager
+（简称NPM 咱们就靠这个来反代 这工具简单还稳定 nginx也行 但我觉得对新人来说没这么方便）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;安装DDNS-GO&lt;span class=&#34;absolute -mt-20&#34; id=&#34;安装ddns-go&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%89%e8%a3%85ddns-go&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ddnsgo文档参考：https://gitee.com/yuanly/Jeessy-DDNS-GO&lt;/li&gt;
+&lt;li&gt;不想麻烦这一步 群晖是有套件版本的 直接装 这一段不用看了 笑死&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Linux一键安装命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linux系统默认安装到opt目录 直接复制粘贴到你Linux的终端里运行即可&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root jeessy/ddns-go&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;群晖一键安装命令
+本文全程按照群晖Nas示范 所以你需要把安装命令里的路径给替换掉
+/opt/ddns-go 更换成 /volume1/docker/ddnsgo
+&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image.png&#34; alt=&#34;image.png&#34; loading=&#34;lazy&#34; /&gt;
+如果你跟我一样的习惯 可以直接调用以下命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;docker run -d --name ddns-go --restart=always --net=host -v /volume1/docker/ddnsgo:/root jeessy/ddns-go&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;群晖Nas安装教程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/imaged604d5e88153d0a5.png&#34; alt=&#34;imaged604d5e88153d0a5.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image15bc361ca7a2a77f.png&#34; alt=&#34;image15bc361ca7a2a77f.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image6816b4633c6c9c7e.png&#34; alt=&#34;image6816b4633c6c9c7e.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image7b4b503058cbebbc.png&#34; alt=&#34;image7b4b503058cbebbc.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image1479e357422d3850.png&#34; alt=&#34;image1479e357422d3850.png&#34; loading=&#34;lazy&#34; /&gt;
+ps：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我不确定群晖是否会自动给你创建文件夹（已确定会自动创建文件夹）  {% del 为了一次性成功不报错 请先去docker文件夹下创建ddnsgo的文件夹 %}&lt;/li&gt;
+&lt;li&gt;计划任务运行后不要急着删除 其实可以一直留着 方便以后再次命令安装docker或执行其他需要用到root的命令 就算他重启后自动再次运行一遍 只要你没有删除那个容器 不会有任何问题 一样正常使用的 不放心再删掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;CloudFlare获取API&lt;span class=&#34;absolute -mt-20&#34; id=&#34;cloudflare获取api&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#cloudflare%e8%8e%b7%e5%8f%96api&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;{% tip warning faa-horizontal animated-hover %}API获取好了复制发微信或记事本里存着 以后长期都需要用到。{% endtip %}&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image2fcffcb9d5a1b038.png&#34; alt=&#34;image2fcffcb9d5a1b038.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image378717908dc3caaa.png&#34; alt=&#34;image378717908dc3caaa.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image2a04407bfa54a710.png&#34; alt=&#34;image2a04407bfa54a710.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image654fa55cf6b155ce.png&#34; alt=&#34;image654fa55cf6b155ce.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/imageaad192c874f41966.png&#34; alt=&#34;imageaad192c874f41966.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/imagec00ced5fe90533df.png&#34; alt=&#34;imagec00ced5fe90533df.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image712d1de70881464e.png&#34; alt=&#34;image712d1de70881464e.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image3e67136a7adfd9eb.png&#34; alt=&#34;image3e67136a7adfd9eb.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;{% progress 50 green 进度50％ %}&lt;/p&gt;
+&lt;h2&gt;安装NginxProxyManager&lt;span class=&#34;absolute -mt-20&#34; id=&#34;安装nginxproxymanager&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%ae%89%e8%a3%85nginxproxymanager&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;按照上面安装ddnsgo的方法 再次安装npm 所以那个创建好的计划任务别急着删！！！这里复制好粘贴进去&lt;/p&gt;
+&lt;p&gt;这个我就不提供Linux默认安装的命令 我来解释每一行的参数代表什么意思
+Linux用户只需要根据我对各个参数的解释 你自己想怎么改就怎么改就行了&lt;/p&gt;
+&lt;p&gt;Nas用户必须给我理解下面啥意思 我会逐条解释 我就不信你懂不了！&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;docker run -d \
+  --name nginxmanager \
+  -p 8080:80 \
+  -p 81:81 \
+  -p 888:443 \
+  -v /volume1/docker/npm:/data \
+  -v /volume1/docker/npm:/etc/letsencrypt \
+  --restart=always \
+  jc21/nginx-proxy-manager&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;当您运行上述的Docker命令时，每一行的含义如下：&lt;span class=&#34;absolute -mt-20&#34; id=&#34;当您运行上述的docker命令时每一行的含义如下&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%bd%93%e6%82%a8%e8%bf%90%e8%a1%8c%e4%b8%8a%e8%bf%b0%e7%9a%84docker%e5%91%bd%e4%bb%a4%e6%97%b6%e6%af%8f%e4%b8%80%e8%a1%8c%e7%9a%84%e5%90%ab%e4%b9%89%e5%a6%82%e4%b8%8b&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docker run -d&lt;/code&gt;: 运行一个新的容器。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--name nginxmanager&lt;/code&gt;: 指定容器的名称为 &amp;ldquo;nginxmanager&amp;rdquo;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p 8080:80&lt;/code&gt;: 将主机上的端口8080映射到容器内的80端口。这样，您可以通过 &lt;code&gt;http://localhost:8080&lt;/code&gt; 访问NginxProxyManager的HTTP端口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p 81:81&lt;/code&gt;: 将主机上的端口81映射到容器内的81端口。这样，您可以通过 &lt;code&gt;http://localhost:81&lt;/code&gt; 访问NginxProxyManager的后台管理界面。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p 888:443&lt;/code&gt;: 将主机上的端口888映射到容器内的443端口。这样，您可以通过 &lt;code&gt;https://localhost:888&lt;/code&gt; 访问NginxProxyManager的HTTPS端口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-v /volume1/docker/npm:/data&lt;/code&gt;: 将主机上的目录 &lt;code&gt;/volume1/docker/npm&lt;/code&gt; 映射到容器内的 &lt;code&gt;/data&lt;/code&gt; 目录。这样，您可以在主机上持久化存储NginxProxyManager的数据。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-v /volume1/docker/npm:/etc/letsencrypt&lt;/code&gt;: 将主机上的目录 &lt;code&gt;/volume1/docker/npm&lt;/code&gt; 映射到容器内的 &lt;code&gt;/etc/letsencrypt&lt;/code&gt; 目录。这样，您可以在主机上持久化存储NginxProxyManager的证书。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--restart=always&lt;/code&gt;: 设置容器在启动时自动重启。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jc21/nginx-proxy-manager&lt;/code&gt;: 使用镜像 &lt;code&gt;jc21/nginx-proxy-manager&lt;/code&gt; 来创建容器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重点就是映射路径需要改到你群晖对应的存储空间 我是拿默认的存储空间1（/volume1）放置docker 大部分人其实照抄就完事了 有的人docker的共享文件夹不在存储空间1上 你就直接改数字就完事了 后面的保持不动就完事了&lt;/p&gt;
+&lt;p&gt;然后就是我把http的端口改到了8080 https端口改到了888 来应对80跟443端口都被封掉了情况 这样我们直接把nas的ip的8080 888端口对应的转发到公网就完事了 还不懂我要杀人了！！！&lt;/p&gt;
+&lt;h2&gt;配置NginxProxyManager&lt;span class=&#34;absolute -mt-20&#34; id=&#34;配置nginxproxymanager&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e9%85%8d%e7%bd%aenginxproxymanager&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;装好后点开面板即可查看这个容器创建好并自动运行了
+打开你Nas的ip+81端口即可访问面板后台&lt;/p&gt;
+&lt;p&gt;默认账号admin@example.com，密码：changeme
+&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image3b4056d8e156096e.png&#34; alt=&#34;image3b4056d8e156096e.png&#34; loading=&#34;lazy&#34; /&gt;
+登陆上去了会强制改邮箱跟密码 按照提示改就好&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image742fe97b744e451f.png&#34; alt=&#34;image742fe97b744e451f.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;教程都快写完了发现CloudFlare的15年自签证书翻车了 那证书不开小云朵不给你用的 emby nas这种套了cf的cdn还能用啊 卡得一批 被我紧急取消了 那个大家可以了解性的学习下 我暂时不提供更高级别的教程 影响不好 想学可以去别处 我们还是根据网上的传统教程申请&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;申请 Let&amp;rsquo;s Encrypt 三个月的证书&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/18/image.png&#34; alt=&#34;image.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/18/image79f0b322a141793f.png&#34; alt=&#34;image79f0b322a141793f.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接下来我们就可以开始反代内网服务到公网了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/imagebe8925d382633e54.png&#34; alt=&#34;imagebe8925d382633e54.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;举例我的qb地址为：http://192.168.31.1:8080&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image96e87f75fc70a23d.png&#34; alt=&#34;image96e87f75fc70a23d.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;截图IP打错了不要在意这些细节&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/image8572058c05de2eba.png&#34; alt=&#34;image8572058c05de2eba.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/imagef1121d60e5c782a1.png&#34; alt=&#34;imagef1121d60e5c782a1.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;到这就结束了 其他反代内容根据这一举例 自行添加。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;路由器端口转发&lt;span class=&#34;absolute -mt-20&#34; id=&#34;路由器端口转发&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%b7%af%e7%94%b1%e5%99%a8%e7%ab%af%e5%8f%a3%e8%bd%ac%e5%8f%91&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;到了最后一步了 不管你是硬路由还是软路由 端口转发不需要我多教吧？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把Nas的ip的http的端口 8080转到8080&lt;/li&gt;
+&lt;li&gt;https的端口888 转发到888&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;到了这一步 都知道443 80的内网端口也是可以转成任意端口的 但还是那句话 为了严谨长期保持稳定 避免未知服务抢占80 443端口 群晖的webstation就是会这样干的。。。所以不要来质疑我为啥这样教大家 咱们开启域名访问的好处也不止是方便访问 而是开启ssl！https没有烦人的警告了也更安全。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/17/imagef2ea23fdc219f9a1.png&#34; alt=&#34;imagef2ea23fdc219f9a1.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;最后测试&lt;span class=&#34;absolute -mt-20&#34; id=&#34;最后测试&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%9c%80%e5%90%8e%e6%b5%8b%e8%af%95&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;以上都做完了 默认cf不需要再改动什么操作了 域名加端口即可直接访问服务页面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/18/image5ca8c286431b455d.png&#34; alt=&#34;image5ca8c286431b455d.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://t.ptlsp.com/images/2024/01/18/image82907471077a8ace.png&#34; alt=&#34;image82907471077a8ace.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;至此 教程结束 感谢观看。
+{% progress 100 gray 进度100％ %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
